@@ -5,7 +5,7 @@ let inputData = document.getElementById("inputData");
 let searchType = document.getElementById("type");
 
 const getData = async (input) => {
-    let res = await fetch(`https://newsapi.org/v2/everything?q=${input}&apiKey=${key}`);
+    let res = await fetch(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${input}&apiKey=${key}`);
     let jsonData = await res.json();
     cardData.innerHTML = "";
     searchType.innerHTML = "";
